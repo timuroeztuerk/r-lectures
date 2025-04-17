@@ -47,3 +47,17 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Ignore the LaTeX files, so that the folders are clean.
+*.aux
+*.nav
+*.out
+*.toc
+*.vrb
+*.synctex.gz
+*.synctex
+*.log
+*.snm
+*.fdb_latexmk
+*.tex
+*.fls
