@@ -81,7 +81,7 @@ print(data)
 # ===========================
 # 7. Visualization (ggplot2)
 # ===========================
-library(ggplot2); library(plotly)
+library(ggplot2)
 plot_df <- data.frame(x=1:5, y=2*(1:5))
 
 # static scatter + histogram
