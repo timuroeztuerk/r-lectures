@@ -14,6 +14,13 @@ distances <- c(687, 5076, 7270, 967, 6364, 1683, 9394, 5712, 5206,
                9030, 5532, 9623)
 distances
 
+sqrt(pi)
+exp(2) * log(4, base = 10)
+
+# or
+exp(2) * log(4)
+test <- sqrt(-1)
+
 # Let's talk about packages you will need.
 install.packages('ggplot2')
 library(ggplot2)
@@ -83,6 +90,22 @@ proportions(table(msleep$vore, msleep$conservation),
 # Proportions, out of total:
 proportions(table(msleep$vore, msleep$conservation))
 
+ggplot(msleep, aes(brainwt, sleep_total, colour = vore)) + 
+  geom_point() +
+  labs(x = "Brain weight",
+       y = "Total sleep time") +
+  xlim(0, 0.2) +
+  ylim(0, 20)
+
+myPlot <- ggplot(msleep, aes(brainwt, sleep_total)) + 
+  geom_point() +
+  labs(x = "Brain weight (logarithmic scale)",
+       y = "Total sleep time") +
+  scale_x_log10() +
+  facet_wrap(~ vore)
+
+ggsave("test.pdf", myPlot, width = 5, height = 5)
+
 # --------------
 # Ex. 2.11.
 # --------------
@@ -95,3 +118,28 @@ proportions(table(msleep$vore, msleep$conservation))
   
 # Compute summary statistics (means, median, min, max, counts for categorical variables). Are there any missing values?
 
+ggplot(penguins, aes(bill_length_mm, flipper_length_mm, colour = species)) +
+  geom_point() +
+  labs(x = "Bill length (mm)",
+       y = "Flipper length (mm)")
+
+
+ggplot(penguins, aes(bill_length_mm, flipper_length_mm, colour = species)) +
+  geom_point(alpha = 1) +
+  labs(x = "Bill length (mm)",
+       y = "Flipper length (mm)")
+
+
+ggplot(penguins, aes(bill_length_mm, flipper_length_mm,
+                     colour = species,
+                     shape = island)) +
+  geom_point() +
+  labs(x = "Bill length (mm)",
+       y = "Flipper length (mm)")
+
+ggplot(penguins, aes(bill_length_mm, 
+                     flipper_length_mm,
+                     colour = species, 
+                     shape = island,size = body_mass_g)) + 
+  geom_point(alpha = 0.5) +  
+  labs(x = "Bill length (mm)",y = "Flipper length (mm)")

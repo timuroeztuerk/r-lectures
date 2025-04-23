@@ -62,3 +62,6 @@ rsconnect/
 *.fdb_latexmk
 *.tex
 *.fls
+
+# Also the archive
+0. archive/
