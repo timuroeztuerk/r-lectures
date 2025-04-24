@@ -13,19 +13,19 @@ If you are a beginner in R, you should start from the first lecture and go throu
 This lecture is an introduction to R, statistics, and object-oriented programming. You will find the slides for the lecture and the R script. My recommendation is to always have the native programming language in your own system, but you can also just use [**Google Colab**](https://colab.research.google.com) or any other online platform that allows you to run R code. This is what I do in the *Data Science in Economic History* course.
 
 [Slides](./lecture-1/lecture-1-qmeh.pdf) /
-[Script](./lecture-1/lecture-1-qmeh.R)
+[Script](./lecture-1/lecture-1.R)
 
 ## Lecture 2 - Basic Programming and Statistics
 We continue where we left off by taking a closer look at vectors, dataframes, and core concepts in R.
 
 [Slides](./lecture-2/lecture-2-qmeh.pdf) /
-[Script](./lecture-2/lecture-2-qmeh.R)
+[Script](./lecture-2/lecture-2.R)
 
 ## Lecture 3 - Probability and Statistical Calculations
 After learning about the data structure and basic syntax in R, we can now talk about probability.
 
 [Slides](./lecture-3/lecture-3-qmeh.pdf) /
-[Script](./lecture-3/lecture-3-qmeh.R)
+[Script](./lecture-3/lecture-3.R)
 
 ## References
 I would recommend that you check out the following resources, as I prepared my material based mostly on them. Any other resource will also give you very similar content if you prefer going your own way. For some data that you would like to play around with, check out [**Kaggle**](https://www.kaggle.com/) or [**UCI Machine Learning Repository**](https://archive.ics.uci.edu/ml/index.php).

@@ -123,12 +123,10 @@ ggplot(penguins, aes(bill_length_mm, flipper_length_mm, colour = species)) +
   labs(x = "Bill length (mm)",
        y = "Flipper length (mm)")
 
-
 ggplot(penguins, aes(bill_length_mm, flipper_length_mm, colour = species)) +
   geom_point(alpha = 1) +
   labs(x = "Bill length (mm)",
        y = "Flipper length (mm)")
-
 
 ggplot(penguins, aes(bill_length_mm, flipper_length_mm,
                      colour = species,
