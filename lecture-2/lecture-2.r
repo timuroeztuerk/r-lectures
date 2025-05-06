@@ -1,3 +1,7 @@
+# ===========================
+# 1. Data and How to Work with Data
+# ===========================
+
 # Vectors, matrices and dataframes.
 age <- c(28, 48, 47, 71, 22, 80, 48, 30, 31)
 # Interaction between a vector and a scalar.
@@ -16,7 +20,6 @@ distances
 
 sqrt(pi)
 exp(2) * log(4, base = 10)
-
 # or
 exp(2) * log(4)
 test <- sqrt(-1)

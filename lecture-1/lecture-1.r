@@ -75,33 +75,3 @@ message(msg)
 
 add_xy <- function(x, y) x + y                  # adder
 message("3+4 =", add_xy(3, 4))
-
-# ===========================
-# 6. Data Manipulation (dplyr)
-# ===========================
-library(dplyr)
-data <- data.frame(
-  ID   = 1:5,
-  Name = c("Aragorn", "Frodo", "Sam", "Legolas", "Gimli"),
-  Age  = c(88, 51, 39, 2931, 140)
-)
-
-filtered_data <- data %>%
-  mutate(Group = if_else(Age < 40, "Young", "Old")) %>%
-  filter(Group == "Young")
-print(filtered_data)
-
-# ===========================
-# 7. Visualization (ggplot2)
-# ===========================
-library(ggplot2)
-plot_df <- data.frame(x = 1:5, y = 2 * (1:5))
-
-# static scatter + histogram
-ggplot(plot_df, aes(x, y)) + geom_point() + labs(title="Scatter")
-ggplot(plot_df, aes(x))   + geom_histogram(bins = 5) + labs(title = "Histogram")
-
-# bar chart example
-bar_df <- data.frame(Category = LETTERS[1:5], Value=c(10, 25, 15, 30, 20))
-ggplot(bar_df, aes(Category, Value, fill = Category)) +
-  geom_col(width = 0.7) + theme_minimal() + labs(title = "Bar Plot")
